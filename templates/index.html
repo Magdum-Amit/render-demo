@@ -1,0 +1,20 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple ML App</title>
+</head>
+<body>
+    <h2>Iris Flower Prediction</h2>
+    <form action="/predict" method="post">
+        <p>Sepal Length: <input type="text" name="sepal_length" required></p>
+        <p>Sepal Width: <input type="text" name="sepal_width" required></p>
+        <p>Petal Length: <input type="text" name="petal_length" required></p>
+        <p>Petal Width: <input type="text" name="petal_width" required></p>
+        <p><input type="submit" value="Predict"></p>
+    </form>
+    {% if prediction %}
+        <h3>{{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
